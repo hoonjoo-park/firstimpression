@@ -1,0 +1,249 @@
+* { 
+    list-style: none;
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+a { 
+    text-decoration: none;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+.dateBox {
+    position: fixed;
+    top : 1rem;
+    left : 1.5rem;
+}
+.date, .weather { 
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ffff;
+}
+.weatherBox {
+    position : fixed;
+    top: 1rem;
+    right : 1.5rem;
+}
+.weather {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.temp {
+    font-size: 2rem;
+}
+.main {
+    font-size: 1rem;
+}
+
+#greetingForm {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform : translate(-50%, -50%);
+}
+#greetingInput {
+    border: none;
+    border-bottom: 3px solid #d1d1d1;
+    padding: 0 0.5em;
+    width: 40vw;
+    height: 4.5rem;
+    text-align: center;
+    background-color: transparent;
+    color: #ffff;
+    font-size: 2.5rem;
+    font-weight: 900;
+    outline: none;
+}
+#greetingInput::placeholder{
+    color: #ffff;
+}
+#greetingForm.hide {
+    display: none;
+}
+
+.centerBox {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%)
+}
+.centerBox.hide {
+    display: none;
+}
+.clock {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 10rem;
+    color : #ffff;
+}
+.quote { 
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    color : #ffff;
+}
+.quote > div {
+    margin-top: 1rem;
+}
+.todoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:fixed;
+    top : 70%;
+    left: 50%;
+    padding: 0 1em;
+    transform: translateX(-50%);
+    max-height: 24vh;
+    width: 25vw;
+    overflow: scroll;
+}
+.todoBox > li {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    width: 100%;
+    opacity: 0.7;
+    overflow: hidden;
+}
+.todoBox > li.hide{
+    max-height: 0;
+    margin: 0;
+}
+.todoBox > li > i {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.actualTodoBox {
+    position: fixed;
+    max-height: 0;
+    max-width: 0;
+    right: 4%;
+    bottom : 5%;
+    background-color: #222831;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .4s;
+    opacity: 0;
+}
+.actualTodoBox.open {
+    opacity: 1;
+    max-width: 22vw;
+    width: 22vw;
+    max-height: 18rem;
+    padding: 2em;
+}
+.todoInput {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.2em 0.5em;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+    color: #ffff;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+.todoInput::placeholder{
+    color: #ffff;
+}
+.todoListBox {
+    max-height: 12rem;
+    overflow-y: scroll;
+}
+.todoListBox >li {
+    position: relative;
+    color: #ffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.todoListBox >li > i {
+    margin-right: 1rem;
+}
+.fa-check-circle {
+    color: #1FAB89;
+}
+.todoListBox >li > .fa-trash-alt {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: crimson;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+.todoListBox >li:hover > .fa-trash-alt{
+    opacity: 1;
+}
+.todoListBox >li:not(:last-child){
+    margin-bottom: 1rem;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(65%);
+}
+#todoBtn {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #1FAB89;
+    border-radius: 50%;
+    color: #ffff;
+    right: 3%;
+    bottom: 3%;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s;
+}
+#todoBtn.open {
+    transform: rotate(180deg);
+    background-color: crimson;
+}
+.userBox {
+    position: fixed;
+    bottom: 3%;
+    left: 1.5%;
+    cursor: pointer;
+}
+.userBox > i:first-child {
+    font-size: 2rem;
+    color: #3490DE;
+    margin-right: 0.6rem;
+}
+#deleteUser{
+    opacity: 0;
+    color: crimson;
+    font-size: 1.5rem;
+    transition: all .2s;
+    transform: translateY(-10%);
+}
+.userBox:hover > #deleteUser{
+    opacity: 1;
+}
+#userID {
+    display: inline-block;
+    margin-right: 0.6rem;
+    color: #ffff;
+    font-size: 1.65rem;
+    font-weight: 600;
+    transform: translateY(-10%);
+}

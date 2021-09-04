@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/187/187883.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>첫인상</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="dateBox">
+            <div class="date"></div>
+        </div>
+        <div class="weatherBox">
+            <div class="weather"></div>
+        </div>
+        <form id="greetingForm">
+            <input id="greetingInput" type="text" placeholder="What's Your Name?" autocomplete="off"/>
+        </form>
+        <div class="centerBox">
+            <h1 class="clock"></h1>
+            <h2 class="quote"></h2>
+        </div>
+        <ul class="todoBox">
+        </ul>
+        <ul class="actualTodoBox">
+            <form id="todoForm">
+                <input class="todoInput" type="text" placeholder="오늘의 할 일을 입력해보세요!" required/>
+            </form>
+            <ul class="todoListBox">
+            </ul>
+        </ul>
+        <button id="todoBtn"><i class="fas fa-angle-up"></i></button>
+        <div class="userBox">
+            <i class="far fa-user-circle"></i>
+            <span id="userID"></span>
+            <i id="deleteUser" class="fas fa-minus-circle"></i>
+        </div>
+    </div>
+    <div class="bg"></div>
+</body>
+<script src="./main.js"></script>
+<script src="./todo.js"></script>
+</html>
