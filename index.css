@@ -160,6 +160,8 @@ a {
     overflow-y: scroll;
 }
 .todoListBox >li {
+    display: flex;
+    align-items: center;
     position: relative;
     color: #ffff;
     font-size: 1.2rem;
@@ -170,14 +172,15 @@ a {
 }
 .fa-check-circle {
     color: #1FAB89;
+    vertical-align: middle;
 }
 .todoListBox >li > .fa-trash-alt {
-    opacity: 0;
     position: absolute;
+    vertical-align: middle;
     right: 0;
     margin-right: 0;
+    opacity: 0;
     font-size: 1rem;
-    line-height: 1.3rem;
     color: crimson;
     cursor: pointer;
     transition: opacity .2s;
@@ -219,31 +222,37 @@ a {
     background-color: crimson;
 }
 .userBox {
+    display: flex;
+    align-items: center;
     position: fixed;
     bottom: 3%;
     left: 1.5%;
     cursor: pointer;
 }
 .userBox > i:first-child {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    height: 100%;
     color: #3490DE;
     margin-right: 0.6rem;
+    vertical-align: middle;
 }
 #deleteUser{
     opacity: 0;
+    height: 100%;
     color: crimson;
     font-size: 1.5rem;
     transition: all .2s;
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
+    vertical-align: middle;
 }
 .userBox:hover > #deleteUser{
     opacity: 1;
 }
 #userID {
     display: inline-block;
+    height: 100%;
     margin-right: 0.6rem;
     color: #ffff;
     font-size: 1.5rem;
     font-weight: 600;
-    transform: translateY(-16%);
 }
