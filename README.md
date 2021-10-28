@@ -1,6 +1,6 @@
 ## firstimpression ☺️
 첫인상(First Impression)은 크롬의 확장앱 모멘텀에서 영감을 받아 제작하게 되었습니다.
----
+
 ### 개발 스택 💻
 1. Vanilla JS
 2. HTML, CSS
